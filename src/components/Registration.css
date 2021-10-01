@@ -1,0 +1,249 @@
+.registration {
+    width: 445px;
+    height: 64px;
+    font-family: 'Serif', sans-serif;
+    font-size: 42px;
+    font-weight: bolder;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+    margin-left: 415px;
+    margin-top: 3%;
+}
+.ApplyLoan {
+    width: 445px;
+    height: 64px;
+    font-family: 'Serif', sans-serif;
+    font-size: 42px;
+    font-weight: bolder;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+    margin-left: 262px;
+    margin-top: 3%;
+}
+.EducationLoan {
+    width: 445px;
+    height: 64px;
+    font-family: 'Serif', sans-serif;
+    font-size: 42px;
+    font-weight: bolder;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+    margin-left: 262px;
+    margin-top: 3%;
+}
+.HomeLoan{
+    margin-left: 243px;
+}
+
+.UpdateProfile {
+    width: 445px;
+    height: 64px;
+    font-family: 'Serif', sans-serif;
+    font-size: 42px;
+    font-weight: bolder;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+    margin-left:263px;
+    margin-top: 3%;
+}
+
+.once {
+    border-color: #fff2c6;
+    width: 510px;
+    height: 72px;
+    border-radius: 7px;
+    margin: 30px 0 20px 260px;
+    background-color: #fff2c6;
+
+}
+
+.image {
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    margin-top: 25px;
+
+}
+
+.text {
+
+    width: 414px;
+    height: 44px;
+    margin-top: -55px;
+    margin-left: 55px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    line-height: 1.63;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
+    color: #f8c41c;
+
+}
+
+
+
+.form {
+    width: 500px;
+    display: inline-block;
+    margin: 15px 260px;
+
+}
+
+.formerror {
+    color: red;
+}
+
+.input-head {
+
+    width: 423px;
+    height: 0px;
+    margin: 16px 474px 30px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #637696;
+}
+.input-head2 {
+    width: 359px;
+    margin-left: 280px;
+}
+.input-head3 {
+    width: 359px;
+    margin-left: 303px;
+}
+
+select {
+    width: 517px;
+    height: 43px;
+    margin: 5px 0 0px;
+    padding: 7px 250px 12px 20px;
+    border-radius: 10px;
+    background-color: #dff3fc;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+input {
+    width: 520px;
+    height: 44px;
+    margin: 5px 0 0px;
+    padding: 6px 250px 12px 20px;
+    border-radius: 10px;
+    background-color: #dff3fc;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+
+.checkbox {
+    background-color: #dff3fc;
+}
+
+#check {
+
+    margin-left: -105px;
+    margin-top: 15px;
+    background-color: #dff3fc;
+
+}
+
+.By_clicking {
+
+    display: inline-block;
+    margin-left: 300px;
+    margin-top: -90px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.By_clicking p {
+    color: #637696;
+}
+
+.By_clicking span {
+    color: #009cde;
+
+}
+
+.continue {
+    margin-left: 31px;
+
+}
+
+.btn5 {
+    width: 503px;
+    height: 55px;
+    margin: 40px 0 10px;
+    padding: 18px 212px 22px 195px;
+    border-radius: 32px;
+    border-color: #86c306;
+    box-shadow: 0 2px 4px 0 #86c306;
+    background-color: #86c306;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    letter-spacing: 2;
+
+}
+.container{
+    border: 2px solid grey;
+    width: 500px;
+    border: 2px solid lightgrey;
+    width: 1000px;
+    height: 2700px;
+    margin-left: 280px;
+}
+
+.UpdateProfileContainer{
+    border: 2px solid grey;
+    width: 500px;
+    border: 2px solid lightgrey;
+    width: 1000px;
+    height: 3000px;
+    margin-left: 280px;
+}
+.ApplyLoanContainer{
+    border: 2px solid grey;
+    width: 500px;
+    border: 2px solid lightgrey;
+    width: 1000px;
+    height: 1000px;
+    margin-left: 280px;
+}
+.EducationLoanContainer{
+    border: 2px solid grey;
+    width: 500px;
+    border: 2px solid lightgrey;
+    width: 1000px;
+    height: 1000px;
+    margin-left: 280px;
+}
+.HomeLoanContainer{
+    border: 2px solid grey;
+    width: 500px;
+    border: 2px solid lightgrey;
+    width: 1000px;
+    height: 800px;
+    margin-left: 280px;
+}
