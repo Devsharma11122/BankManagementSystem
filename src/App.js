@@ -9,18 +9,15 @@ import Nav from './Nav'
 import EducationLoan from './components/EducationLoan';
 import HomeLoan from './components/HomeLoan';
 import GetUser from './components/GetUser';
-import {useDispatch, useSelector} from 'react-redux'
-import {getUsers} from './actions/Action';
+import {useDispatch} from 'react-redux'
+import {getUsers,loanUser} from './actions/Action';
 import React,{useEffect} from 'react';
+import Logout from './components/Logout';
+import Admin from './components/Admin';
 
 function App() {
 
 
-  const dispatch= useDispatch();
-
-  useEffect(() => {
-    dispatch(getUsers());
-  }, []);
 
   
   return (
@@ -34,8 +31,10 @@ function App() {
        <Route path="/updateprofile"><UpdateProfile/></Route>
        <Route path="/educationloan"><EducationLoan/></Route>
        <Route path="/getuser"><GetUser/></Route>
-
+       <Route path="/admin"><Admin/></Route>
        <Route path="/homeloan"><HomeLoan/></Route>
+       <Route path="/logout"><Logout/></Route>
+
      </div>
     </div>
   );

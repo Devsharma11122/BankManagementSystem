@@ -2,8 +2,12 @@ import React,{useState} from 'react'
 import {useForm} from 'react-hook-form'
 import './Registration.css'
 import { useHistory } from 'react-router-dom'
+import { useDispatch,useSelector } from 'react-redux'
+import { applyLoan } from '../actions/Action'
 
 const ApplyLoan = () => {
+    const dispatch = useDispatch()
+    const username = useSelector(state => state.BankReducer.username)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const history = useHistory();
     const [loanType,setLoanType] = useState();
@@ -27,7 +31,7 @@ const ApplyLoan = () => {
         if(loanType === "Education") {
             history.push("/educationloan");
         }
-        else if(loanType === "Loan"){
+        else if(loanType === "Home"){
             history.push("/homeloan")
         }
         
@@ -35,10 +39,10 @@ const ApplyLoan = () => {
     }
     const onSubmit=(data)=>{      
         setLoanType(data.LoanType)
+        data.UserName = username
         onValidate(data)
-        
-
         handleRoute(data);
+        dispatch(applyLoan(data))    
         console.log(data);
     }
     return (

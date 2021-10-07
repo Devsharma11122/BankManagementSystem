@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import './Registration.css'
 import {useDispatch} from 'react-redux'
 import { addUser } from '../actions/Action'
+import { useHistory } from 'react-router'
 
 const Registration = () => {
     
@@ -11,6 +12,7 @@ const Registration = () => {
     const [accType, setAccType] =useState();
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const calculate_age = (dob1) => {
@@ -83,10 +85,13 @@ const Registration = () => {
 
     const onSubmit=(data)=>{
        if(onValidate(data)) {
-            alert ("You have successfully registered!")
+            dispatch(addUser(data));
+            alert ("You have successfully registered!");
+            history.push("/")
+
        }
        else{
-           alert("Something went wrong!")
+           alert("please enter valid details")
 
        }
         //dispatch(addUser(data));

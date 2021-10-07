@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import './Login.css'
-import {Link} from 'react-router-dom'
-import {withRouter} from 'react-router-dom';
+//import {Link} from 'react-router-dom'
+//import {withRouter} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import {useDispatch,useSelector} from 'react-redux'
 import { userLogin } from '../actions/Action';
@@ -11,8 +11,12 @@ import { userLogin } from '../actions/Action';
 const Login = () => {
     const history = useHistory();
     const dispatch = useDispatch();
+    const loginStatus = useSelector((state) => state.BankReducer.loggedIn);
     const [userName, setUserName] = useState();
     const [password, setPassword] = useState();
+    const CheckStatus =()=>{
+      return useSelector((state) => state.BankReducer.loggedIn);
+    }
   
     const handleRoute = () =>{ 
     history.push("/registration");
@@ -20,7 +24,9 @@ const Login = () => {
     function handleLogin(e) {
       e.preventDefault();
       dispatch(userLogin({"userName":userName,"password":password}));
-      history.push("/applyloan");
+      if(CheckStatus){
+        history.push("/applyloan");
+      }
     }
     return (
     <div className="wrapper-fadeInDown">

@@ -1,10 +1,19 @@
 import React from 'react'
 import './Registration.css'
+import { useDispatch,useSelector } from 'react-redux'
 import {useForm} from 'react-hook-form'
+import { educationLoan } from '../actions/Action'
+import { useHistory } from 'react-router'
 
 const EducationLoan = () => {
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const username = useSelector(state => state.BankReducer.username)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit=(data)=>{
+        data.UserName = username
+        dispatch(educationLoan(data))
+        history.push('/applyloan')
         console.log(data)
     }
     return (
@@ -21,7 +30,7 @@ const EducationLoan = () => {
                 <input type="text" placeholder="Enter Course Name" {...register("Course",{required:true})}/>
                 <span className="formerror">{errors.Course && "This feild is required"}</span><br/>
 
-                <label className="input-head input-head2" >Course Fee</label><br/>
+                <label className="input-head input-head2" >Father's Name Fee</label><br/>
                 <input type="text" placeholder="Enter Father's Name" {...register("FatherName",{required:true})}/>
                 <span className="formerror">{errors.FatherName && "This feild is required"}</span><br/>
 

@@ -1,9 +1,18 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
+import { homeLoan } from '../actions/Action'
+import { useDispatch,useSelector } from 'react-redux'
+import { useHistory } from 'react-router'
 
 const HomeLoan = () => {
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const username = useSelector(state => state.BankReducer.username)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit=(data)=>{
+        data.UserName =username
+        dispatch(homeLoan(data))
+        history.push('/applyloan')
         console.log(data)
     }
     return (
